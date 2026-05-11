@@ -1,0 +1,28 @@
+pipeline {
+
+    agent any
+
+    stages {
+
+        stage('hello') {
+
+            steps {
+
+                echo 'Hello Jenkins'
+
+                sh 'echo "hello world"'
+            }
+        }
+    }
+
+    post {
+
+        success {
+            echo 'Build Successful'
+        }
+
+        failure {
+            echo 'Build Failed'
+        }
+    }
+}
