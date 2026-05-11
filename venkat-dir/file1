@@ -1,1 +1,15 @@
-i want become devops engineer
+pipeline {
+
+    agent any
+
+    stages {
+
+        stage('hello') {
+
+            steps {
+
+                sh 'echo "hello world"'
+            }
+        }
+    }
+}
